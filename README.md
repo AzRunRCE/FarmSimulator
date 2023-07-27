@@ -12,4 +12,7 @@ une api qui permet d'atteindre le jour suivant
 lors d'un nouveau jour
 
 - la poule ponds aléatoirement entre 0 2 oeufs
-- la santé poule descends d'un 1 point
+
+
+Première étape
+ - Créer un projet Java SE ainsi que son projet de test.
