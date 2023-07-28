@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="farmSimulator.core">
-    <output-path>$PROJECT_DIR$/out/artifacts/farmSimulator_core</output-path>
-    <root id="archive" name="farmSimulator.core.jar" />
-  </artifact>
-</component>
