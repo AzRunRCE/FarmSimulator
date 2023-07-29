@@ -5,10 +5,14 @@ import java.util.List;
 
 public class Ferme {
     public List<Poule> poules;
-    public Ferme() {
+    public int pieces;
+
+    public Ferme(int pieces) {
+       this.pieces = pieces;
        poules = new ArrayList<>();
        Poule poule = new Poule();
        poules.add(poule);
+
     }
 }
 
