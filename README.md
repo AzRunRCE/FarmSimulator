@@ -1,5 +1,5 @@
 # FarmSimulator
-La vie à la campagne, c'est amusant ! Occupez-vous de vos animaux, récoltez des œufs, produisez et vendez votre propre nourriture.
+La vie à la campagne, c'est amusant ! Occupez-vous de vos animaux, récoltez des œufs, produisez et vendez vos propres produits.
 Accomplissez de nombreuses missions ! 
 
 ## Lancemement du jeu 
@@ -26,4 +26,4 @@ Accomplissez de nombreuses missions !
 ## Roadmap
 
 - [x] Créer un projet Java SE ainsi que son projet de test.
-- [ ] Ajouter le solde de pièce par défaut lors du lancement d'une partie.
+- [x] Ajouter le solde de pièce par défaut lors du lancement d'une partie.
