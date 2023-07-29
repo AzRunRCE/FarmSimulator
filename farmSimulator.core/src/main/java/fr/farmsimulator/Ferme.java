@@ -10,7 +10,7 @@ public class Ferme {
     public Ferme(int pieces) {
        this.pieces = pieces;
        poules = new ArrayList<>();
-       Poule poule = new Poule();
+       Poule poule = new Poule("Charlie", 15, 30, 5, false);
        poules.add(poule);
 
     }
