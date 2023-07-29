@@ -1,18 +1,29 @@
 # FarmSimulator
-Une application de ferme virtuelle dans laquelle le joueur accomplit ses objectifs
+La vie à la campagne, c'est amusant ! Occupez-vous de vos animaux, récoltez des œufs, produisez et vendez votre propre nourriture.
+Accomplissez de nombreuses missions ! 
 
-une poule peut vivre maximum 30j
-une détient 5 point de santé
-elle perds un point de santé à chaque dévut de journée nouris.
+## Lancemement du jeu 
 
-Debut partie
-- une nouvelle ferme avec une poule avec 5 points
+1. Une nouvelle ferme avec une poule (nom, 5 points de faim, 1 jour, 15 pièces).
+2. Un solde de 100 pièces.
 
-une api qui permet d'atteindre le jour suivant
-lors d'un nouveau jour
+## Gameplay 
 
-- la poule ponds aléatoirement entre 0 2 oeufs
+- Action jour suivant :
+  - Les poules pondent aléatoirement entre 0 et 2 œufs.
+  - Les points de faim d'une poule diminuent de 1.
+  - Les jours d'une poule augmentent de 1.
 
+## Technique
 
-Première étape
- - Créer un projet Java SE ainsi que son projet de test.
+- Une api qui permet d'atteindre le jour suivant.
+- Une poule a :
+  - Un nom unique
+  - 5 points de faim (elle perd un point de faim à chaque début de journée)
+  - Un jour (la durée de vie d'une poule est de 30 jours)
+  - Un prix
+
+## Roadmap
+
+- [x] Créer un projet Java SE ainsi que son projet de test.
+- [ ] Ajouter le solde de pièce par défaut lors du lancement d'une partie.
