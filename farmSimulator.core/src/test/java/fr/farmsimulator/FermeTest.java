@@ -36,9 +36,10 @@ public class FermeTest {
         List<Poule> poules = new ArrayList<>();
         int totalDesOeufs = Production.productionOeufs(poules);
 
+        // Aucune poule dans la list
         assertEquals(0, totalDesOeufs);
 
-        System.out.println("Sur "+ poules.size() + " poule, vous avez eu " + totalDesOeufs + " oeufs");
+        System.out.println("Sur " + poules.size() + " poule, vous avez eu " + totalDesOeufs + " oeufs");
     }
 
     @Test
@@ -48,11 +49,14 @@ public class FermeTest {
         int nombreDePoules = maFerme.poules.size();
         int totalDesOeufs = productionOeufs(maFerme.poules);
 
-        assertTrue("Le total des oeufs doit être supérieur ou égale à 0", totalDesOeufs >= 0);
-        assertTrue("Le total des oeufs doit inférieur et égale au nombre de poule multiplié par 2",totalDesOeufs <= nombreDePoules * 2);
+        assertTrue("Le total des oeufs doit être supérieur ou égale à 0",
+                totalDesOeufs >= 0);
+        assertTrue("Le total des oeufs doit être inférieur et égale à 1 poule multiplié par 2",
+                totalDesOeufs <= nombreDePoules * 2);
 
-        System.out.println("Sur "+ nombreDePoules + " poule, vous avez eu " + totalDesOeufs + " oeuf(s)");
+        System.out.println("Sur " + nombreDePoules + " poule, vous avez eu " + totalDesOeufs + " oeuf(s)");
     }
+
     @Test
     public void productionOeufDeuxPoulesTest() {
         Ferme maFerme = new Ferme(100);
@@ -63,9 +67,12 @@ public class FermeTest {
         int nombreDePoules = maFerme.poules.size();
         int totalDesOeufs = productionOeufs(maFerme.poules);
 
-        assertTrue("Le total des oeufs doit être supérieur ou égale à 0", totalDesOeufs >= 0);
-        assertTrue("inférieur et égale à " + nombreDePoules + " multiplié par 2",totalDesOeufs <= nombreDePoules * 2);
+        assertTrue("Le total des oeufs doit être supérieur ou égale à 0",
+                totalDesOeufs >= 0);
+        assertTrue("Le total des oeufs doit être inférieur et égale 2 poules multiplié par 2",
+                totalDesOeufs <= nombreDePoules * 2);
 
-        System.out.println("Sur "+ nombreDePoules + " poules, vous avez eu " + totalDesOeufs + " oeuf(s)");
+        System.out.println("Sur " + nombreDePoules + " poules, vous avez eu " + totalDesOeufs + " oeuf(s)");
+
     }
 }
