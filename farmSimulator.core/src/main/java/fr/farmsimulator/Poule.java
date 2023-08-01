@@ -7,12 +7,12 @@ public class Poule {
     private int faim;
     private boolean mort;
 
-    public Poule(String nom, int prix, int jours,  int faim, boolean mort) {
-        this.nom = nom;
-        this.prix = prix;
-        this.jours = jours;
-        this.faim = faim;
-        this.mort = mort;
+    public Poule() {
+        this.nom = "Poule";
+        this.prix = 15;
+        this.jours = 1;
+        this.faim = 5;
+        this.mort = false;
     }
 
     public String getNom() {
