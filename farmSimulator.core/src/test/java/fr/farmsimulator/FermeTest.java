@@ -62,7 +62,7 @@ public class FermeTest {
         Ferme maFerme = new Ferme(100);
 
         // Ajout d'une nouvelle poule
-        maFerme.poules.add(new Poule("Roberta", 15, 30, 5, false));
+        maFerme.poules.add(new Poule());
 
         int nombreDePoules = maFerme.poules.size();
         int totalDesOeufs = productionOeufs(maFerme.poules);
