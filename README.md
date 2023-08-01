@@ -27,3 +27,6 @@ Accomplissez de nombreuses missions !
 
 - [x] Créer un projet Java SE ainsi que son projet de test.
 - [x] Ajouter le solde de pièce par défaut lors du lancement d'une partie.
+- [x] Production des œufs 
+- [ ] Acheter une poule
+- [ ] Vendre une poule 
