@@ -14,5 +14,21 @@ public class Ferme {
        poule.setNom("Robert");
        poules.add(poule);
     }
+
+    public List<Poule> getPoules() {
+        return poules;
+    }
+
+    public void setPoules(List<Poule> poules) {
+        this.poules = poules;
+    }
+
+    public int getPieces() {
+        return pieces;
+    }
+
+    public void setPieces(int pieces) {
+        this.pieces = pieces;
+    }
 }
 
