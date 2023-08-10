@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static fr.farmsimulator.Production.productionOeufs;
+import static fr.farmsimulator.utils.NomAleatoire.AjouterNom;
 import static junit.framework.Assert.*;
 
 public class FermeTest {
@@ -25,10 +26,12 @@ public class FermeTest {
 
         System.out.println("Nombre de poule : " + maFerme.poules.size());
 
-        // Affiche les noms de la liste des poules
+        /*
+        Affiche les noms de la liste des poules
         for (Poule poule : maFerme.poules) {
             System.out.println("Nom : " + poule.getNom());
         }
+        */
     }
 
     @Test
@@ -39,7 +42,7 @@ public class FermeTest {
         // Aucune poule dans la list
         assertEquals(0, totalDesOeufs);
 
-        System.out.println("Sur " + poules.size() + " poule, vous avez eu " + totalDesOeufs + " oeufs");
+        //System.out.println("Sur " + poules.size() + " poule, vous avez eu " + totalDesOeufs + " oeufs");
     }
 
     @Test
@@ -54,7 +57,7 @@ public class FermeTest {
         assertTrue("Le total des oeufs doit être inférieur et égale à 1 poule multiplié par 2",
                 totalDesOeufs <= nombreDePoules * 2);
 
-        System.out.println("Sur " + nombreDePoules + " poule, vous avez eu " + totalDesOeufs + " oeuf(s)");
+        //System.out.println("Sur " + nombreDePoules + " poule, vous avez eu " + totalDesOeufs + " oeuf(s)");
     }
 
     @Test
@@ -72,7 +75,33 @@ public class FermeTest {
         assertTrue("Le total des oeufs doit être inférieur et égale 2 poules multiplié par 2",
                 totalDesOeufs <= nombreDePoules * 2);
 
-        System.out.println("Sur " + nombreDePoules + " poules, vous avez eu " + totalDesOeufs + " oeuf(s)");
+        //System.out.println("Sur " + nombreDePoules + " poules, vous avez eu " + totalDesOeufs + " oeuf(s)");
+
+    }
+
+    @Test
+    public void AcheterPouleActionTest() {
+        Ferme maFerme = new Ferme(1000);
+        Poule nouvellePoule = new Poule();
+
+        List<String> noms = new ArrayList<>();
+        for (Poule poule : maFerme.poules) {
+            noms.add(poule.getNom());
+        }
+
+        String nouveauNom = AjouterNom(noms);
+
+        new AcheterPouleAction(maFerme, nouvellePoule, nouveauNom);
+
+        assertTrue("Le nombre de poule de la ferme est supérieur à 2",
+                maFerme.poules.size() > 1);
+//        assertEquals(85, maFerme.pieces);
+
+        System.out.println(maFerme.pieces);
+
+        for (Poule poule : maFerme.poules) {
+            System.out.println("Nom : " + poule.getNom());
+        }
 
     }
 }
