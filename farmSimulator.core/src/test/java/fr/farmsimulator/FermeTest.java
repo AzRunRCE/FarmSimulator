@@ -15,7 +15,18 @@ public class FermeTest {
         Ferme maFerme = new Ferme(100);
         assertNotNull(maFerme);
     }
+  
 
+    //TODO: Créer une class ConfigurationFerme
+    //TODO: Supprimer la class Production
+    //TODO: Implémenter une methode getPonteJour() (0 ou x)
+    //TODO: GetPonteTotalJour qui fais appel a chacune de tes poules de ton poulalier 
+    et qui somme le tous.
+
+      /*  var ferme = new Ferme(new ConfigurationFerme() {
+        nbPoule=1,
+        Argent=10
+    }); */
     @Test
     public void initialisationFermeTest() {
         Ferme maFerme = new Ferme(100);
@@ -34,6 +45,9 @@ public class FermeTest {
         */
     }
 
+     //TODO: When_AucunePoule_Then_ProductionOeuf_ShouldReturn_0Oeuf
+
+     //TODO: Créer un class ProductionTest
     @Test
     public void productionOeufAucunePouleTest() {
         List<Poule> poules = new ArrayList<>();
