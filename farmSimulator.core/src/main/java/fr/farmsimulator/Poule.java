@@ -7,8 +7,8 @@ public class Poule {
     private int faim;
     private boolean mort;
 
-    public Poule() {
-        this.nom = "Poule";
+    public Poule(String nom) {
+        this.nom = nom;
         this.prix = 15;
         this.jours = 1;
         this.faim = 5;
