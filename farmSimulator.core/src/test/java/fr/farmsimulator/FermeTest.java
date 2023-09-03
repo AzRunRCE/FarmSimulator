@@ -12,6 +12,11 @@ import static fr.farmsimulator.utils.NomsIndispo.ListNomsIndisponibles;
 import static junit.framework.Assert.*;
 
 public class FermeTest {
+
+    //TODO: Créer une class ConfigurationFerme
+    //TODO: Supprimer la class Production
+    //TODO: Implémenter une methode getPonteJour() (0 ou x)
+    //TODO: GetPonteTotalJour qui fais appel a chacune de tes poules de ton poulalier et qui somme le tous.
     @Test
     public void constructorFermeTest() {
         Ferme maFerme = new Ferme(100);
