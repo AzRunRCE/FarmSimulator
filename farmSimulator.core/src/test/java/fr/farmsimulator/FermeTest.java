@@ -1,5 +1,6 @@
 package fr.farmsimulator;
 
+import fr.farmsimulator.utils.NomsIndispo;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -7,6 +8,7 @@ import java.util.List;
 
 import static fr.farmsimulator.Production.productionOeufs;
 import static fr.farmsimulator.utils.NomAleatoire.AjouterNom;
+import static fr.farmsimulator.utils.NomsIndispo.ListNomsIndisponibles;
 import static junit.framework.Assert.*;
 
 public class FermeTest {
@@ -65,7 +67,7 @@ public class FermeTest {
         Ferme maFerme = new Ferme(100);
 
         // Ajout d'une nouvelle poule
-        maFerme.poules.add(new Poule());
+        maFerme.poules.add(new Poule("Gérard"));
 
         int nombreDePoules = maFerme.poules.size();
         int totalDesOeufs = productionOeufs(maFerme.poules);
@@ -82,16 +84,12 @@ public class FermeTest {
     @Test
     public void AcheterPouleActionTest() {
         Ferme maFerme = new Ferme(1000);
-        Poule nouvellePoule = new Poule();
 
-        List<String> noms = new ArrayList<>();
-        for (Poule poule : maFerme.poules) {
-            noms.add(poule.getNom());
-        }
+        List<String> ListNomsIndisponibles = ListNomsIndisponibles(maFerme);
 
-        String nouveauNom = AjouterNom(noms);
+        Poule nouvellePoule = new Poule(AjouterNom(ListNomsIndisponibles));
 
-        new AcheterPouleAction(maFerme, nouvellePoule, nouveauNom);
+        new AcheterPouleAction(maFerme, nouvellePoule);
 
         assertTrue("Le nombre de poule de la ferme est supérieur à 2",
                 maFerme.poules.size() > 1);
