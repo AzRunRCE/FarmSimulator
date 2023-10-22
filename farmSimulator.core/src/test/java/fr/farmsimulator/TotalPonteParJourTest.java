@@ -38,7 +38,7 @@ public class TotalPonteParJourTest {
         Ferme maFerme = new Ferme(config);
         int nombreTotalOeufs = Poule.getTotalPonteParJour(maFerme.poules.size());
 
-        assertTrue("Le total des oeufs doit être inférieur au nombre de poule ou égale à 0",
+        assertTrue("Le total des oeufs doit être compris entre 0 et 10",
                 nombreTotalOeufs >= 0 && nombreTotalOeufs <= nombrePoule);
     }
 }
