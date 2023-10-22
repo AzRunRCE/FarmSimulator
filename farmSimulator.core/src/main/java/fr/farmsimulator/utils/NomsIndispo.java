@@ -1,7 +1,7 @@
 package fr.farmsimulator.utils;
 
-import fr.farmsimulator.Ferme;
-import fr.farmsimulator.Poule;
+import fr.farmsimulator.beans.Ferme;
+import fr.farmsimulator.beans.Poule;
 
 import java.util.ArrayList;
 import java.util.List;
