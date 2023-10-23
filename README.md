@@ -30,4 +30,49 @@ Accomplissez de nombreuses missions !
 - [x] Production des œufs 
 - [x] Acheter une poule
 - [x] Ajouter un nom aléatoire à une poule
-- [ ] Vendre une poule 
+- [ ] Vendre une poule
+
+# Commentaires
+Une factory pourrait etre utile
+
+
+class FermeFactory {
+
+contructor(config);
+public Create();
+{
+return new Ferme(config.config)
+}
+}
+
+
+
+extraire la partie random.
+
+public interface irandomService {
+
+public int GetRandom(int min , int max);
+}
+public class RandomService : irandomService {
+
+public int GetRandom(int min , int max){
+  return  (int) (Math.random() * max);
+}
+
+
+public class FakeRandomService : irandomService{
+
+public int GetRandom(int min , int max){
+return 1;
+}
+}
+
+
+
+// en prod 
+
+new PondreAction(new RandomService()).Execute()
+
+new PondreAction(new FakeRandomService()).Execute()
+
+randomService : irandomService
