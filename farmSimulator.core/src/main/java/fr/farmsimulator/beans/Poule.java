@@ -1,5 +1,7 @@
 package fr.farmsimulator.beans;
 
+import java.util.Random;
+
 public class Poule {
     private String nom;
     private int prix;
@@ -23,6 +25,8 @@ public class Poule {
     }
 
     public static int getTotalPonteParJour(int totalDesPoules) {
+
+
 
         int nombreTotalOeufs = 0;
 
